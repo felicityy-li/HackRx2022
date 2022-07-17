@@ -5,6 +5,7 @@ CREATE TABLE patient (
 	`dateofbirth` DATE,
 	`healthcardnumber` VARCHAR(100),
     `address` VARCHAR(500),
+    `dateadded` DATE,
 	PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -23,4 +24,9 @@ CREATE TABLE caregiver_patient (
 	caregiverid VARCHAR(100) NOT NULL,
 	FOREIGN KEY (patientid) REFERENCES patient(id),
     FOREIGN KEY (caregiverid) REFERENCES caregiver(email)
+) ENGINE=InnoDB;
+
+
+CREATE TABLE caregiver_notification (
+    
 ) ENGINE=InnoDB;
