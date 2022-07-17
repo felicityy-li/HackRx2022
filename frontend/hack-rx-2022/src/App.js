@@ -3,15 +3,20 @@ import "./App.css";
 import LoginPage from "./pages/Login";
 import SignUpPage from "./pages/SignUp";
 import ContactCaregiversPage from "./pages/ContactCaregivers";
+import DashboardFeature from "./pages/Dashboard";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<ContactCaregiversPage />} />
+          <Route path="/" element={<DashboardFeature />} />
           <Route path="/loginPage" element={<LoginPage />} />
           <Route path="/signUpPage" element={<SignUpPage />} />
+          <Route
+            path="contactCaregiversPage"
+            element={<ContactCaregiversPage />}
+          />
         </Routes>
       </Router>
     </div>
