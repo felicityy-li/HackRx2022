@@ -6,7 +6,7 @@ const signin = async (request, response) => {
     console.log(request.body);
 
     if (rows.length != 0) {
-        response.status(200).send({
+        return response.status(200).send({
             message: 'valid credentials',
             data: {
                 email: request.body.email
@@ -14,7 +14,7 @@ const signin = async (request, response) => {
         });
     }
 
-    response.status(400).send({
+    return response.status(400).send({
         message: "invalid credentials",
         data: request.body
     });
@@ -47,7 +47,7 @@ const signup = async (request, response) => {
             });
         }
 
-        response.status(400).send({
+        return response.status(400).send({
             message: "caregiver not created",
             data: {
                 email: request.body.email,
@@ -57,7 +57,7 @@ const signup = async (request, response) => {
             }
         });
     } catch (error) {
-        response.status(400).send({
+        return response.status(400).send({
             message: error.message,
             data: {
                 email: request.body.email,

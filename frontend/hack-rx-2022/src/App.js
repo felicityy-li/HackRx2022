@@ -11,8 +11,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<DashboardFeature />} />
-          <Route path="/loginPage" element={<LoginPage />} />
-          <Route path="/signUpPage" element={<SignUpPage />} />
+          <Route path="/signin" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           <Route
             path="contactCaregiversPage"
             element={<ContactCaregiversPage />}
