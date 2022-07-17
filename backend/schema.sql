@@ -24,3 +24,8 @@ CREATE TABLE caregiver_patient (
 	FOREIGN KEY (patientid) REFERENCES patient(id),
     FOREIGN KEY (caregiverid) REFERENCES caregiver(email)
 ) ENGINE=InnoDB;
+
+
+CREATE TABLE caregiver_notification (
+    
+) ENGINE=InnoDB;

@@ -7,7 +7,7 @@ const {
     getAllPatientsForCaregiver,
     updateCaregiver,
     updatePatient,
-    createPatient } = require("../controllers/index.route");
+    createPatient } = require("../controllers/index.controller");
 
 const {
     validateSignIn,
