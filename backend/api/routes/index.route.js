@@ -9,6 +9,11 @@ const {
     updatePatient,
     createPatient } = require("../controllers/index.controller");
 
+
+const {
+    processAndSendAlerts
+} = require("../controllers/notification.controller");
+
 const {
     validateSignIn,
     validateSignUp,
@@ -50,5 +55,9 @@ router.route('/patient').post(validateCreatePatient, createPatient);
  */
 router.route('/patient').put(updatePatient);
 
+/**
+ * sends alerts to the caregivers based on their patients qualification
+ */
+router.route('/alert').post(processAndSendAlerts);
 
 module.exports = router;

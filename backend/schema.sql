@@ -5,6 +5,7 @@ CREATE TABLE patient (
 	`dateofbirth` DATE,
 	`healthcardnumber` VARCHAR(100),
     `address` VARCHAR(500),
+    `dateadded` DATE,
 	PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 

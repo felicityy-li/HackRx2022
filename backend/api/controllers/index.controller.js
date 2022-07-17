@@ -72,14 +72,16 @@ const signup = async (request, response) => {
 const createPatient = async (request, response) => {
 
     let patientId = uuidv4();
+    let dateAdded = new Date().toISOString().slice(0, 10);
 
     try {
-        let [rows] = await (await dbConnection).query(`INSERT INTO patient (id, firstname, lastname, healthcardnumber, address) VALUES (?, ?, ?, ?, ?); INSERT INTO caregiver_patient (patientid, caregiverid) VALUES (?, ?);`, [
+        let [rows] = await (await dbConnection).query(`INSERT INTO patient (id, firstname, lastname, healthcardnumber, address, dateadded) VALUES (?, ?, ?, ?, ?, ?); INSERT INTO caregiver_patient (patientid, caregiverid) VALUES (?, ?);`, [
             patientId,
             request.body.firstname,
             request.body.lastname,
             request.body.healthcardnumber,
             request.body.address,
+            dateAdded,
             patientId,
             request.body.caregiverid
         ]);
