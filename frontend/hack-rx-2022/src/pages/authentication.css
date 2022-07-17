@@ -1,0 +1,65 @@
+.spiltScreen{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.brandIMG{
+    margin-left: -50px;
+    margin-right: 60px;
+}
+
+.textRightSide{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.inputSection{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.input {
+    margin-top: 50px;
+    height: 40px;
+    width: 460px;
+}
+
+.input::placeholder {
+    font-size: 18px;
+}
+
+.linksSection{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.signUpLink{
+    margin-top: 30px;
+    text-align: left;
+    margin-right: 140px;
+}
+
+.forgotPasswordLink{
+    margin-top: 30px;
+    text-align: right;
+}
+
+.buttonAuth {
+    margin-top: 50px;
+    font-size: 26px;
+    border-radius: 20px;
+    background-color: #5299D3; /* blue */
+    border-color: #5299D3;
+    color: white;
+    text-align: center;
+    padding: 10px 190px;
+}
