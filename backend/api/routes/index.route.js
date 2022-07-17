@@ -7,17 +7,23 @@ const {
     getAllPatientsForCaregiver,
     updateCaregiver,
     updatePatient,
-    createPatient, } = require("../controllers/index.route");
+    createPatient } = require("../controllers/index.route");
+
+const {
+    validateSignIn,
+    validateSignUp,
+    validateCreatePatient
+} = require('../middleware/index.middleware');
 
 /**
  * caregiver signup
  */
-router.route('/signup').post(signup);
+router.route('/signup').post(validateSignUp, signup);
 
 /**
  * caregiver signin
  */
-router.route('/signin').post(signin);
+router.route('/signin').post(validateSignIn, signin);
 
 /**
  * Update caregiver's own profile
@@ -37,7 +43,7 @@ router.route('/caregiver/patient').get(getPatientForCaregiver);
 /**
  * Create a patient profile
  */
-router.route('/patient').post(createPatient);
+router.route('/patient').post(validateCreatePatient, createPatient);
 
 /**
  * Update a patient profile
