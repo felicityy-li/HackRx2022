@@ -2,6 +2,7 @@ var express = require('express');
 var dotenv = require('dotenv');
 var cors = require('cors');
 let routes = require('./api/routes/index.route');
+let DBConnectionPoolBuilder = require("./db/index.db");
 
 dotenv.config();
 var app = express();
