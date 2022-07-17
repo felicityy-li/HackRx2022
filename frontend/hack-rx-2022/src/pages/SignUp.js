@@ -1,4 +1,4 @@
-import "./authentication.css";
+import "../styles/authentication.css";
 import give_care_logo from "../pictures/give_care_logo.png";
 
 export default function SignUpPage() {
@@ -37,8 +37,6 @@ export default function SignUpPage() {
           <button className="buttonAuth">Login</button>
         </a>
       </div>
-
-      <div className="imagineLeftSide">{/* <img /> */}</div>
     </div>
   );
 }
