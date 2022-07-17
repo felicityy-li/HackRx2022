@@ -3,8 +3,11 @@ import plusSignButton from "../pictures/plusSignButton.png";
 
 export default function AddProfilePage() {
   return (
-    <div className="spiltScreen" >
-      <div className="imgLeftSide" style={{ margin: "200px", marginRight: '200px' }}>
+    <div className="spiltScreen">
+      <div
+        className="imgLeftSide"
+        style={{ margin: "200px", marginRight: "200px" }}
+      >
         <img src={plusSignButton} alt="" style={{ height: "250px" }} />
         <p>Insert A Picture</p>
       </div>
