@@ -1,5 +1,3 @@
-import "../styles/profileIcon.css";
-
 export default function ProfileIcon(props) {
   const { imageSrc, name, age } = props;
 
