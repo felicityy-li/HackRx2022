@@ -38,6 +38,7 @@ export default function DashboardFeature() {
               imageSrc={person.imageSrc}
               name={person.name}
               age={person.age}
+              style={{margin: '50px'}}
             />
           </div>
         );
